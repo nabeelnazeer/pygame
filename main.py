@@ -6,17 +6,26 @@ pygame.display.set_caption("rocket saga")
 
 WHITE = (255, 255, 255)
 
+FPS = 60
+
+YELLOW_SPACESHIP_IMAGE = pygame.image.loat('')
+
+def draw_window():
+    WIN.fill(WHITE)
+    pygame.display.update()
+
 def main():
+
+    clock = pygame.time.clock()
+
 
     run = True
     while run:
+        clock.tick(FPS)
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 run = False
-        WIN.fill(WHITE)
-        pygame.display.update(
-            
-        )    
+            draw_windoe()   
     pygame.quit()
 if __name__ == "__main__":
     main()                 
